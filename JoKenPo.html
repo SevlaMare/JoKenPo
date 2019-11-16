@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1,h2,p{
+	text-align: center;
+	margin-top:10%;
+}
+p{color:teal; font-size: 2em;}
+
+</style>
+
+<body>
+	<h1>JoKenPo!</h1>
+	<p id="resultTag"></p>
+
+<script>
+	var listAllowed = ['rock', 'paper', 'scissors'];
+	var computerSelection, playerSelection, result;
+
+
+	// generate computer choice
+	function computerPlay(){
+	  var randomIndex = Math.floor(Math.random() * listAllowed.length);
+	  computerSelection = listAllowed[randomIndex];
+	  return computerSelection;
+	};
+	
+	computerPlay();
+		
+	// player input
+	while (!listAllowed.includes(playerSelection)){
+		playerSelection = window.prompt('Choice:\n Rock, Paper or Scissors')
+	};
+
+	// -----------------------
+	function playRound(playerSelection, computerSelection) {
+		// your code here!
+	}
+	
+	
+	// player choice against computer
+	if (playerSelection == 'paper') {
+		if (computerSelection == 'rock') {
+			result = 'You win this round!';
+		} else if (computerSelection == 'scissors') {
+			result = 'You lost, scissors wins';
+		} else {
+			result = 'The game draw.';
+		};
+	} else if (playerSelection == 'rock') {
+		if (computerSelection == 'scissors') {
+			result = 'You win!';
+		} else if (computerSelection == 'paper') {
+			result = 'Defeat...';
+		} else {
+			result = 'Draw!';
+		};
+	} else if (playerSelection == 'scissors') {
+		if (computerSelection == 'paper') {
+			result = 'Win.';
+		} else if (computerSelection == 'rock'){
+			result = 'Lost.';
+		} else {
+			result = 'Draw.';
+		};
+	};
+	
+	document.getElementById("resultTag").innerHTML = result;
+</script>
+
+</body>
+</html>

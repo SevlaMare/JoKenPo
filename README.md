@@ -1,2 +1,2 @@
 # JoKenPo
-Pratica em Java Script.
+Short game with JS.

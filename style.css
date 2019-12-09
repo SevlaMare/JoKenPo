@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.body{
+    background: #c9b6b6;
+}
+
+h1{
+    /* margin: 40px 40px; */
+}
+
+p{
+    font-size: 2em;
+}
+
+h1, p{
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.container{
+    background: #9e8686;
+    display: flex;
+    justify-content: center;
+}
+
+#co2 {
+    font-size: .6em;
+}
+
+.btn-x{
+    background: #2b92d6;
+    width: 200px;
+    padding:30px;
+    margin:15px;
+    border: solid 2px #0d6086;
+}
+
+.btn-x:hover{
+    transform: scale(1.07);
+    transition: .5s;
+    background: #e7ad0c;
+    border: solid 2px #a37106;
+}
+

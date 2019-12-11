@@ -7,7 +7,7 @@ function computerPlay() {
 }
 
 function check(playerSelection, computerSelection) {
-    let win = 0, match = 0, lost = 0, draw = 0
+    win = 0, match = 0, lost = 0, draw = 0
     if (playerSelection == computerSelection) {
         match += 1
         draw += 1
@@ -34,29 +34,22 @@ function check(playerSelection, computerSelection) {
 }
 
 function playRound() { 
-    playerSelection = this.id; // get id of button click with addEventListener
+    // get id of button click with addEventListener
+    playerSelection = this.id; 
     computerSelection = computerPlay();
     
-    // test
+    // test choices
     //window.alert(`we in! ${playerSelection} and ${computerSelection}`)
+    
+    // test fx check
     //window.alert(check(playerSelection, computerSelection))
     
-    // escreve valor var win nos paragrafos do #co2
-    selector1 = document.querySelector('#win')
-    selector1.innerHTML += 'Extra stuff';
+    const selector1 = document.querySelector('#win');
+    selector1.textContent = `Wins: ${win}`;
 }
 
-// modify variables when click
+// OK - call fx when click button to modify var
 const buttons = document.querySelectorAll('button');
 for (let count = 0; count < buttons.length; count+=1) {
     buttons[count].addEventListener('click', playRound);
 }
-
-
-// ---------- reset button ---------------
-// function onclick1() {
-//     return 'reset stuff'
-// };
-
-// try run only for .btn-x - to use buttons reset aside
-// const buttons = document.querySelectorAll('.btn-x');

@@ -7,13 +7,15 @@
     background: #c9b6b6;
 }
 
-h1{
-    /* margin: 40px 40px; */
-}
-
 p{
     font-size: 2em;
 }
+
+#co2{
+    margin-top:20px;
+}
+
+h1{margin:10px;}
 
 h1, p{
     text-align: center;

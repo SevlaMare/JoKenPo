@@ -38,11 +38,13 @@ h1, p{
     padding:30px;
     margin:15px;
     border: solid 2px #0d6086;
+    border-radius: 10px;
+    box-shadow: 3px 3px 1px rgb(0,0,0,.3);
 }
 
 .btn-x:hover{
     transform: scale(1.07);
-    transition: .5s;
+    transition: .3s;
     background: #e7ad0c;
     border: solid 2px #a37106;
 }

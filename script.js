@@ -1,13 +1,11 @@
-var rounds = 3
+var match = 0, lost = 0, draw = 0, win = 0
 
-function computerPlay() {
-    let choice = ['rock','paper','scissors']
-    let x = Math.floor((Math.random() * 3) + 0);
-    return choice[x];
-}
+var computerSelection = 'rock'
+var playerSelection = window.prompt('Var')
+window.alert(playerSelection)
 
-function check(playerSelection, computerSelection) {
-    win = 0, match = 0, lost = 0, draw = 0
+// toda vez que clica roda a fx de novo
+function check(playerSelection, computerSelection){
     if (playerSelection == computerSelection) {
         match += 1
         draw += 1
@@ -30,26 +28,7 @@ function check(playerSelection, computerSelection) {
         match += 1
         lost += 1
     }
-    return win
-}
-
-function playRound() { 
-    // get id of button click with addEventListener
-    playerSelection = this.id; 
-    computerSelection = computerPlay();
     
-    // test choices
-    //window.alert(`we in! ${playerSelection} and ${computerSelection}`)
-    
-    // test fx check
-    //window.alert(check(playerSelection, computerSelection))
-    
-    const selector1 = document.querySelector('#win');
-    selector1.textContent = `Wins: ${win}`;
-}
-
-// OK - call fx when click button to modify var
-const buttons = document.querySelectorAll('button');
-for (let count = 0; count < buttons.length; count+=1) {
-    buttons[count].addEventListener('click', playRound);
+    selWin = document.querySelector('#win')
+    return selWin.textContent = `Win: ${win}`
 }

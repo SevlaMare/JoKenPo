@@ -1,20 +1,30 @@
 var win = 0, lost = 0, draw = 0, match = 0
-var computerSelection = 'rock'
+
+
+// generate computer choice
+function computerSelection(){
+    let op = ['rock', 'paper', 'scissors']
+    return op[Math.floor( ( Math.random() * op.length ) )]
+}
+
 
 // selectors to scores board #score
 const selWin = document.querySelector('#win')
 const selLost = document.querySelector('#lost')
 const selDraw = document.querySelector('#draw')
 
+
 // selector to buttons .btn-x
 const selRock = document.querySelector('#rock')
 const selPaper = document.querySelector('#paper')
 const selScissors = document.querySelector('#scissors')
 
+
 // call fx on button click
 selRock.addEventListener('click', playRock)
 selPaper.addEventListener('click', playPaper)
 selScissors.addEventListener('click', playScissors)
+
 
 // function to play match and update the scores
 function check(playerSelection, computerSelection){
@@ -41,21 +51,40 @@ function check(playerSelection, computerSelection){
         lost += 1
         return selLost.textContent = `Lost: ${lost}`
     }
-    
+
+    // end match
+    if (match >= 3) {
+        console.log('Finish!')
+        if (win > lost){
+            console.log('You Win!')
+        } else if (lost > win){
+            console.log('You lost.')
+        } else {
+            console.log('Draw...')
+        }
+        // disable buttons
+        // show play again button
+    }
 }
 
-// functions to set play choice and check result
+
+// functions to get play choice and check result
 function playRock() {
-    playerSelection = 'rock'
+    let playerSelection = 'rock'
+    let computerSelection = computerSelection()
     check(playerSelection, computerSelection)
 }
+
 
 function playPaper() {
-    playerSelection = 'paper'
+    let playerSelection = 'paper'
+    let computerSelection = computerSelection()
     check(playerSelection, computerSelection)
 }
 
+
 function playScissors() {
-    playerSelection = 'scissors'
+    let playerSelection = 'scissors'
+    let computerSelection = computerSelection()
     check(playerSelection, computerSelection)
 }

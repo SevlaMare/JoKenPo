@@ -28,7 +28,7 @@ h1, p{
     justify-content: center;
 }
 
-#score {
+#score{
     font-size: .6em;
 }
 
@@ -47,5 +47,17 @@ h1, p{
     transition: .3s;
     background: #e7ad0c;
     border: solid 2px #a37106;
+}
+
+a{
+    text-decoration: none;
+    color: #111;
+    font-size: 1.2em;
+    font-family: Montserrat;
+}
+
+footer{
+    text-align: center;
+    padding-top: 220px;
 }
 
